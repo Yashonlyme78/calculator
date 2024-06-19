@@ -1,5 +1,6 @@
 using namespace std;
 #include <iostream>
+#include <stdlib.h>
 int main(){
     
     for ( ; ; )
@@ -8,7 +9,7 @@ int main(){
         cout<<endl;
         cout <<"Select which operation you wanna perform: "<<endl;
         cout<<"--------------------------------------------------------------------------"<<endl;
-        cout<<"1. Addtion | 2. Subtraction | 3. Multiplication | 4. Division | 5. Exit  "<<endl;
+        cout<<"1. Addtion | 2. Subtraction | 3. Multiplication | 4. Division | 5. Conversion | 6. Exit  "<<endl;
         cout<<"--------------------------------------------------------------------------"<<endl;
         cout<<"Enter the number of operator: ";
         int a;
@@ -92,7 +93,19 @@ int main(){
             cin>>x2;
             int div=x2/x1;
             cout<<div<<endl;
-        }else if (a==5)
+        }else if(a==5){
+            int i;
+            char buffer [33];
+            printf ("Enter a number: ");
+             scanf ("%d",&i);
+            itoa (i,buffer,10);
+            printf ("decimal: %s\n",buffer);
+            itoa (i,buffer,16);
+            printf ("hexadecimal: %s\n",buffer);
+            itoa (i,buffer,2);
+            printf ("binary: %s\n",buffer);
+            return 0;
+        }else if (a==6)
         {
             cout<<"Thank you"<<endl;
             break;
